@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
         fs.readFile(dataPath, "utf-8", (err, data) => {
           if (err) {
             res.writeHead(500, { "Content-Type": "text/plain" });
-            res.end("Error reading data file");
+            res.end("Errori data failis wakitxvisas");
             return;
           }
           res.writeHead(200, { "Content-Type": "application/json" });
@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
         });
       } else {
         res.writeHead(404, { "Content-Type": "text/plain" });
-        res.end("data.json not found");
+        res.end("data.json ver vipovet :| ");
       }
     } else if (req.url === "/random") {
       const randomNumber = Math.floor(Math.random() * 100) + 1;
